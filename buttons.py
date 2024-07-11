@@ -13,6 +13,15 @@ def num_button():
     kb.add(but1)
     return kb
 
+# Кнопка отправки локации
+
+
+def loc_button():
+    kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    but1 = types.KeyboardButton('Отправить локацию', request_location=True)
+    kb.add(but1)
+    return kb
+
 # кнопки выбора товара
 
 

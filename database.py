@@ -149,3 +149,7 @@ def make_order(user_id):
     # Фиксируем изменения
     conn.commit()
     return product_counts, totals
+
+# Отображение корзины
+def show_cart(user_id):
+    return sql.execute('SELECT * FROM cart WHERE user_id=?;', (user_id,)).fetchall()
